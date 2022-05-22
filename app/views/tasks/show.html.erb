@@ -1,8 +1,10 @@
-<h1><%= @task.title %></h1>
 <br>
-<p><%= @task.details %></p>
-<p><%= @task.completed %></p>
-
-<p>
-  <%= link_to "Homepage", root_path %>
-</p>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @task.title %></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%= @task.completed %></h6>
+    <p class="card-text"><%= @task.details %></p>
+    <a href="#" class="card-link"><%= link_to "Update Task", edit_path %></a>
+  </div>
+</div>
+<%= render "footer" %>
